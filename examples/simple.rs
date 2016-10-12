@@ -1,4 +1,3 @@
-#![crate_type = "proc-macro"]
 #![feature(proc_macro)]
 
 #[macro_use]
@@ -16,7 +15,7 @@ impl Simple {
 }
 
 fn main() {
-    let s = Simple::new("hello".to_owned());
+    let mut s = Simple::new("hello".to_owned());
     println!("{}", s.field());
-    //s.set_field("there".to_owned());
+    s.set_field("there".to_owned());
 }
