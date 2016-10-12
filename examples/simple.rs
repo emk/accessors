@@ -4,6 +4,7 @@
 extern crate accessors;
 
 #[derive(getters, setters)]
+#[setters(into = true)]
 struct Simple {
     field: String,
 }
@@ -17,5 +18,5 @@ impl Simple {
 fn main() {
     let mut s = Simple::new("hello".to_owned());
     println!("{}", s.field());
-    s.set_field("there".to_owned());
+    s.set_field("there");
 }
