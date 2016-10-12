@@ -1,9 +1,9 @@
 # `#[derive(accessors)]`: getters and setters for Rust (WIP)
 
-**This is a work in progress!** We use the new macros 1.1 to implement
-basic getters and setters.  This is useful if you have a library that
-exports a struct with lots of fields, but you don't want to make the fields
-themselves public.
+**This is a work in progress!** We use the new [macros 1.1][] support in
+nightly Rust to automatically generate basic getters and setters.  This is
+useful if you have a library that exports a struct with lots of fields, but
+you don't want to make the fields themselves public.
 
 ```rust
 #![feature(proc_macro)]
@@ -32,3 +32,5 @@ fn main() {
     s.set_field("there".to_owned());
 }
 ```
+
+[macros 1.1]: https://users.rust-lang.org/t/macros-and-syntax-extensions-and-compiler-plugins-where-are-we-at/7600
