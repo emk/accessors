@@ -11,7 +11,7 @@ you don't want to make the fields themselves public.
 #[macro_use]
 extern crate accessors;
 
-#[derive(accessors)]
+#[derive(getters, setters)]
 struct Simple {
     field: String,
 }
@@ -24,11 +24,7 @@ impl Simple {
 
 fn main() {
     let mut s = Simple::new("hello".to_owned());
-
-    // Automatically generated getter.
     println!("{}", s.field());
-
-    // Automatically generated setter.
     s.set_field("there".to_owned());
 }
 ```

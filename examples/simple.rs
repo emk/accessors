@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate accessors;
 
-#[derive(accessors)]
+#[derive(getters, setters)]
 struct Simple {
     field: String,
 }
