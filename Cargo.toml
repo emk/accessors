@@ -1,6 +1,6 @@
 [package]
 name = "accessors"
-version = "0.0.2"
+version = "0.0.3"
 authors = ["Eric Kidd <git@randomhacks.net>"]
 
 description = "(WIP) Getters and setters for Rust using macros 1.1"
