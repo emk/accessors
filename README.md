@@ -7,8 +7,8 @@ generate basic getters and setters.  This is useful if you have a library
 that exports a struct with lots of fields, but you don't want to make the
 fields themselves public.
 
-If you specify `#[setters(into = true)]`, you can generate setters which
-use `Into` to automatically convert to the desired type.
+If you specify `#[setters(into)]`, you can generate setters which use
+`Into` to automatically convert to the desired type.
 
 ```rust
 #![feature(proc_macro)]
