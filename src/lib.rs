@@ -138,10 +138,14 @@ fn config_from(attrs: &[syn::Attribute],
                 if !keys.contains(&name) {
                     panic!("'{}' in {:?} is not a known attribute", name, attr);
                 }
-                if let syn::MetaItem::NameValue(_, ref value) = *arg {
-                    result.insert(name.to_owned(), value.to_owned());
-                } else {
-                    panic!("'{:?}' must be a key-vaue pair", &arg);
+                match *arg {
+                    syn::MetaItem::Word(_) => {
+                        result.insert(name.to_owned(), syn::Lit::Bool(true));
+                    }
+                    syn::MetaItem::NameValue(_, ref value) => {
+                        result.insert(name.to_owned(), value.to_owned());
+                    }
+                    _ => panic!("can't parse '{:?}'", &arg),
                 }
             }
         } else {

@@ -17,7 +17,7 @@ use `Into` to automatically convert to the desired type.
 extern crate accessors;
 
 #[derive(getters, setters)]
-#[setters(into = true)]
+#[setters(into)]
 struct Simple {
     field: String,
 }
