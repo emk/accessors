@@ -1,3 +1,8 @@
+//! Support for `#[derive(accesors)]`.  Based on the [example code][] for
+//! syn.
+//!
+//! [example code]: https://github.com/dtolnay/syn
+
 #![feature(proc_macro, proc_macro_lib)]
 
 #[macro_use]
